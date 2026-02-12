@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+requests
+apscheduler
+sqlalchemy
+psycopg2-binary
+pydantic-settings
