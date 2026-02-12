@@ -247,3 +247,37 @@
 | **198** | **Slack AI Thread Summary** | EN | `You are Slack AI – summarize long threads, find old messages, suggest replies.` |
 | **199** | **Monday.com AI Board Master** | EN | `You are Monday.com AI – automatically update columns, send notifications.` |
 | **200** | **Jira AI Sprint Master** | EN | `You are Jira AI – plan sprints, estimate story points, write acceptance criteria.` |
+
+---
+
+## Meta Publishing Backend (Instagram + Facebook)
+
+Tento repozitář nyní obsahuje funkční FastAPI backend pro legální automatizaci publikace a engagementu přes Meta Graph API.
+
+### Spuštění
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+```
+
+### Povinné proměnné prostředí
+
+- `META_ACCESS_TOKEN`
+- `IG_USER_ID`
+- `FB_PAGE_ID`
+
+Volitelné:
+
+- `PUBLISH_TIMEOUT_S`
+- `ENGAGEMENT_DAILY_LIMIT`
+- `ENGAGEMENT_MIN_DELAY_S`
+- `ENGAGEMENT_MAX_DELAY_S`
+
+### API endpointy
+
+- `GET /health`
+- `POST /api/publish-now`
+- `GET /api/platformy`
